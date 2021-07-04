@@ -57,6 +57,7 @@
             <div class="input-field">
                 <select id="reason" name="reason" class="validate">
                     <option value="month" selected>Monatliche Prüfung</option>
+                    <option value="afteruse">Nach Übung/Einsatz</option>
                     <option value="other">Sonstiges</option>
                 </select>
                 <label for="reason">Dokumentationsgrund</label>
@@ -82,31 +83,31 @@
                 <label for="position">Position:</label>
             </div>
             <div class="input-field">
-                <input placeholder="placeholder" id="pa" pattern="[0-9]*" type="number" min="0" class="validate">
+                <input placeholder="Kilver PA 001" id="pa" inputmode="decimal" type="number" min="0" class="validate">
                 <label for="pa">Atemschutzgerät</label>
             </div>
-            <!-- <div class="input-field">
-                <input placeholder="6 Monate nach letzter Prüfung" id="pa_validuntil" type="date" class="validate">
-                <label for="pa_validuntil">Nächste Prüfung</label>
-            </div> -->
             <div class="input-field">
-                <input placeholder="placeholder" id="bottle" pattern="[0-9]*" type="number" min="0" class="validate">
+                <input placeholder="06/21" id="pa_validuntil" type="text" class="validate">
+                <label for="pa_validuntil">Nächste Prüfung PA</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="Flasche 002" id="bottle" inputmode="decimal" type="number" min="0" class="validate">
                 <label for="bottle">Flasche</label>
             </div>
             <div class="input-field">
-                <input placeholder="placeholder" id="bottle_pressure" pattern="[0-9]*" type="number" min="0" class="validate">
+                <input placeholder="300 Bar" id="bottle_pressure" inputmode="decimal" type="number" min="0" class="validate">
                 <label for="bottle_pressure">Geprüfter Druck</label>
             </div>
             <div class="input-field">
-                <input placeholder="placeholder" id="mask" pattern="[0-9]*" type="number" min="0" class="validate">
+                <input placeholder="Kilver MA 003" id="mask" inputmode="decimal" type="number" min="0" class="validate">
                 <label for="mask">Maske</label>
             </div>
-            <!-- <div class="input-field">
-                <input placeholder="placeholder" id="pa_validuntil" type="date" class="validate">
-                <label for="pa_validuntil">Nächste Prüfung Maske</label>
-            </div> -->
             <div class="input-field">
-                <input placeholder="placeholder" id="addinfo" type="text" class="validate">
+                <input placeholder="06/21" id="mask_validuntil" type="text" class="validate">
+                <label for="mask_validuntil">Nächste Prüfung Maske</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="Zusatzinfo" id="addinfo" type="text" class="validate">
                 <label for="addinfo">Vermerk</label>
             </div>
 
