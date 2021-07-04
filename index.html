@@ -1,0 +1,103 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LZ Kilver</title>
+    <!-- materialize icons, css & js -->
+    <link type="text/css" href="css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="css/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</head>
+
+<body class="grey lighten-4">
+    <!-- top nav -->
+    <nav class="z-depth-0">
+        <div class="nav-wrapper container">
+            <p>LZ Kilver Geräteprüfung <span>Testumgebung</span></p>
+        </div>
+    </nav>
+
+    <!-- entrys -->
+    <div class="entrys container grey-text text-darken-1">
+        <div class="card-panel entry white row">
+            <img src="/img/default.png" alt="entry thumb">
+            <div class="entry-details">
+                <div class="entry-title">Edame Noodles</div>
+                <div class="entry-ingredients">Edame Beans, Noodels, Garlic oil</div>
+            </div>
+            <div class="entry-delete">
+                <i class="material-icons">delete_outline</i>
+            </div>
+        </div>
+        <div class="card-panel entry white row">
+            <img src="/img/dish.png" alt="entry thumb">
+            <div class="entry-details">
+                <div class="entry-title">Edame Noodles</div>
+                <div class="entry-ingredients">Edame Beans, Noodels, Garlic oil</div>
+            </div>
+            <div class="entry-delete">
+                <i class="material-icons">delete_outline</i>
+            </div>
+        </div>
+    </div>
+
+    <!-- add new entry -->
+    <div class="center">
+        <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+
+
+    <!-- add entry side nav -->
+    <div id="side-form" class="sidenav side-form">
+        <form class="add-entry container section">
+            <h6>New Entry</h6>
+            <div class="divider"></div>
+
+            <div class="input-field">
+                <select id="vehicle" name="vehicle" class="validate">
+                    <option value="LFKAT" selected>LFKAT</option>
+                    <option value="LF20">LF20</option>
+                    <option value="LF10">LF10</option>
+                    <option value="other">Sonstiges</option>
+                </select>
+                <label for="vehicle">Fahrzeug:</label>
+            </div>
+            <div class="input-field">
+                <select id="position" name="position" class="validate">
+                    <option value="AF">AF</option>
+                    <option value="AM">AM</option>
+                    <option value="WF">WF</option>
+                    <option value="WM">WM</option>
+                    <option value="other">Andere</option>
+                </select>
+                <label for="position">Position:</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="placeholder" id="title" type="text" class="validate">
+                <label for="title">Title</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="placeholder" id="title" type="text" class="validate">
+                <label for="title">Title</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="placeholder" id="title" type="text" class="validate">
+                <label for="title">Title</label>
+            </div>
+
+            <!-- add button -->
+            <div class="input-field center">
+                <button class="btn-small">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/ui.js"></script>
+</body>
+
+</html>
