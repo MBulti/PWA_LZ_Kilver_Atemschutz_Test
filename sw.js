@@ -1,4 +1,4 @@
-const staticCacheName = "site-static";
+const staticCacheName = "site-static-v1"; // remember to update this if any file is changed
 const assets = [
     "./",
     "./index.html",
@@ -23,7 +23,13 @@ self.addEventListener("install", event => {
 });
 // activate service worker
 self.addEventListener("activate", event => {
-    console.log("serviceworker is active");
+    event.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(keys
+                .filter(key => key !== staticCacheName)
+                .map(key => caches.delete(key)))
+        })
+    )
 });
 // fetch event
 self.addEventListener("fetch", event => {
