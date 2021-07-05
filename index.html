@@ -27,26 +27,7 @@
 
     <!-- entrys -->
     <div class="entrys container grey-text text-darken-1">
-        <div class="card-panel entry white row">
-            <img src="./img/default.png" alt="entry thumb">
-            <div class="entry-details">
-                <div class="entry-title">Edame Noodles</div>
-                <div class="entry-ingredients">Edame Beans, Noodels, Garlic oil</div>
-            </div>
-            <div class="entry-delete">
-                <i class="material-icons">delete_outline</i>
-            </div>
-        </div>
-        <div class="card-panel entry white row">
-            <img src="./img/default.png" alt="entry thumb">
-            <div class="entry-details">
-                <div class="entry-title">Edame Noodles</div>
-                <div class="entry-ingredients">Edame Beans, Noodels, Garlic oil</div>
-            </div>
-            <div class="entry-delete">
-                <i class="material-icons">delete_outline</i>
-            </div>
-        </div>
+        
     </div>
 
     <!-- add new entry -->
@@ -123,7 +104,27 @@
         </form>
     </div>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCEL13wdOWDZVzWykL3nJipADTf8sakihY",
+            authDomain: "lz-kilver-atemschutz-test.firebaseapp.com",
+            projectId: "lz-kilver-atemschutz-test",
+            storageBucket: "lz-kilver-atemschutz-test.appspot.com",
+            messagingSenderId: "1088600523857",
+            appId: "1:1088600523857:web:457aa1f3668ab816cbe470"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+
     <script src="./js/app.js"></script>
+    <script src="./js/db.js"></script>
     <script src="./js/ui.js"></script>
 </body>
 
