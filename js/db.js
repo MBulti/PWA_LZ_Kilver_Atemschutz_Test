@@ -17,6 +17,7 @@ db.collection("entrys").onSnapshot((snapshot) => {
             renderEntry(change.doc.data(), change.doc.id);
         }
         else if (change.type === "removed") {
+            removeEntry(change.doc.id);
         }
     });
 })
@@ -30,11 +31,19 @@ form.addEventListener("submit", event => {
         reason: form.reason.value,
         vehicle: form.vehicle.value,
         position: form.position.value,
-        pa: form.pa.value,
     }
     db.collection("entrys").add(entry).catch(err => {
         console.log(err)
     })
-
     form.reset();
 })
+
+// delete entry
+const entryContainer = document.querySelector(".entrys")
+entryContainer.addEventListener("click", event => {
+    if (event.target.nodeName === "I") {
+        let id = event.target.getAttribute("data-id");
+        db.collection("entrys").doc(id).delete();
+    }
+    // use this for detail page 
+});

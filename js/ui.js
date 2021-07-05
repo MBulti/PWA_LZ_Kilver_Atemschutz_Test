@@ -32,3 +32,8 @@ const renderEntry = (data, id) => {
     `;
     entrys.innerHTML += html;
 };
+// remove entry from DOM
+const removeEntry = (id) => {
+    let entry = document.querySelector(`.entry[data-id=${id}]`);
+    entry.remove();
+}
