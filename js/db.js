@@ -26,11 +26,20 @@ db.collection("entrys").onSnapshot((snapshot) => {
 const form = document.querySelector("form");
 form.addEventListener("submit", event => {
     event.preventDefault();
+    let today = new Date();
 
     const entry = {
+        dtEntry: today,
         reason: form.reason.value,
         vehicle: form.vehicle.value,
         position: form.position.value,
+        pa: form.pa.value,
+        pa_validuntil: form.pa_validuntil.value,
+        bottle: form.bottle.value,
+        bottle_pressure: form.bottle_pressure.value,
+        mask: form.mask.value,
+        mask_validuntil: form.mask_validuntil.value,
+        addinfo: form.addinfo.value
     }
     db.collection("entrys").add(entry).catch(err => {
         console.log(err)
